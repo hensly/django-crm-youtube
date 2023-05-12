@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+    <title>Все компании</title>
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">CRM</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Поиск" aria-label="Search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Выйти</a>
+    </li>
+  </ul>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Компании</span>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item ">
+            <a class="nav-link " href="#">
+              <span data-feather="file-text"></span>
+              Все компании
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <span data-feather="file-text"></span>
+              Создать
+              <span data-feather="plus-circle"></span>
+            </a>
+          </li>
+        </ul>
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Менеджеры</span>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="users"></span>
+              Все менеджеры
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="users"></span>
+              Добавить
+              <span data-feather="plus-circle"></span>
+            </a>
+          </li>
+        </ul>
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Аналитика</span>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              Отчет 1
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              Отчет 2
+            </a>
+          </li>
+        </ul>
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Настройки</span>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              Настройка 1
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              Настройка 2
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      
+
+      
+
+      <h2 class="title m-5">Мееджеры</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+            <col width="25%" /> 
+    		<col width="25%" /> 
+    		<col width="25%" /> 
+    		<col width="25%" /> 
+    		
+          <thead>
+            <tr>
+              <th>ФИО</th>
+              <th>email</th>
+              <th>Роль</th>
+              <th>Статус</th>
+            
+            </tr>
+          </thead>
+          <tbody>
+               <tr>
+                <td><a href="#">Иванов Иван</a><br></td>
+                <td>as@as.as</td>
+                <td>Сотрудник</td>
+                <td>Активный</td>
+                
+              </tr>
+              <tr>
+                <td><a href="#">Иванов Иван</a><br></td>
+                <td>as@as.as</td>
+                <td>Сотрудник</td>
+                <td>Активный</td>
+                
+              </tr>
+              <tr>
+                <td><a href="#">Иванов Иван</a><br></td>
+                <td>as@as.as</td>
+                <td>Сотрудник</td>
+                <td>Активный</td>
+                
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+     
+    
+     <script src="dashboard.js"></script>
+  </body>
+</html>

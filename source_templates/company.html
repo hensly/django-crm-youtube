@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/style.css" rel="stylesheet">
+	<title>Создать компанию</title>
+</head>
+
+<body>
+
+	<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">CRM</a>
+		<button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<input class="form-control form-control-dark w-100" type="text" placeholder="Поиск" aria-label="Search">
+		<ul class="navbar-nav px-3">
+			<li class="nav-item text-nowrap">
+				<a class="nav-link" href="#">Выйти</a>
+			</li>
+		</ul>
+	</header>
+	<div class="container-fluid">
+		<div class="row">
+			<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+				<div class="position-sticky pt-3">
+					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+						<span>Компании</span>
+					</h6>
+					<ul class="nav flex-column mb-2">
+						<li class="nav-item ">
+							<a class="nav-link " href="#">
+								<span data-feather="file-text"></span>
+								Все компании
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#">
+								<span data-feather="file-text"></span>
+								Создать
+								<span data-feather="plus-circle"></span>
+							</a>
+						</li>
+					</ul>
+					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+						<span>Менеджеры</span>
+					</h6>
+					<ul class="nav flex-column mb-2">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="users"></span>
+								Все менеджеры
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="users"></span>
+								Добавить
+								<span data-feather="plus-circle"></span>
+							</a>
+						</li>
+					</ul>
+					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+						<span>Аналитика</span>
+					</h6>
+					<ul class="nav flex-column mb-2">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="layers"></span>
+								Отчет 1
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="layers"></span>
+								Отчет 2
+							</a>
+						</li>
+					</ul>
+					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+						<span>Настройки</span>
+					</h6>
+					<ul class="nav flex-column mb-2">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="layers"></span>
+								Настройка 1
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<span data-feather="layers"></span>
+								Настройка 2
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+				<div class="row g-3 mt-3">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-body">
+
+								<input type="hidden" value="agents" name="type" id="type">
+								<div class="row">
+
+									<div class="col-6">
+										<p id="org_id" style="display:none">1293</p>
+										<div class="org_header">Контактные данные</div>
+										<p>
+											<a href="" data-toggle="modal" data-target="#add_contact" id="new_contact">Добавить <span data-feather="plus-circle"></span> </a>
+										</p>
+										<div class="org_table">
+											<table class="slide_1_to_m " id="contacts">
+												<thead>
+												</thead>
+												<colgroup>
+													<col width="7%">
+													<col width="5%">
+													<col width="5%">
+													<col width="4%">
+													<col width="1%">
+												</colgroup>
+												<tbody>
+													<tr>
+														<td><b>ФИО</b></td>
+														<td><b>Телефон(ы)</b></td>
+														<td><b>Email(ы)</b></td>
+														<td><b>Должность</b></td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr id="">
+														<td><span id="contact_name1261">Иванов Иван Иванович</span></td>
+														<td><span id="contact_phones1261">21212121212 <br></span></td>
+														<td><span id="contact_emails1261"><a href="mailto:as@as.as">as@as.as</a> <br></span></td>
+														<td><span id="contact_dolzhnost1261">ДИРЕКТОР</span></td>
+														<td>
+															<a href="#">редактировать</a>
+															<a href="#">удалить</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div>
+											<div class="org_header mt-3">Документы компании </div>
+											<div class="clear"></div>
+											<div style="min-height: 100px;min-height: 400px width: 100%; overflow:auto; border: solid 1px black;" class="mt-1">
+												<p>Документы не загружены</p>
+												<table width="100%" class="org_table ">
+													<colgroup>
+														<col width="50%">
+														<col width="30%">
+														<col width="20%">
+													</colgroup>
+													<tbody>
+														<tr id="1">
+															<td><a href="#" target="_blank" title="">document.pdf</a></td>
+															<td>02.02.2002</td>
+															<td class="red">
+																<a href="javascript:if(confirm('Подтвердите удаление')) delete())">X удалить</a>
+															</td>
+														</tr>
+														<tr id="2">
+															<td><a href="#" target="_blank" title="">document.pdf</a></td>
+															<td>02.02.2002</td>
+															<td class="red">
+																<a href="javascript:if(confirm('Подтвердите удаление')) delete()">X удалить</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											
+												<div class="mt-3 me-2 mb-3">
+													<button type="button" class="btn btn-sm btn-primary float-end">
+														<span class="glyphicon glyphicon-cloud-upload"></span> Загрузить файлы
+													</button>
+													<div class="clear"></div>
+												</div>
+											</div>
+											
+										</div>
+										<div>
+											<div class="org_header mt-3">Счета и договора для клиента</div>
+											<a href="#" style="font-weight:bold">Новый платеж</a>
+											<a href="#">Все платежи</a>
+											<div class="clear"></div>
+											<form action="" method="post" enctype="multipart/form-data" id="rekvizits_form" class="divtop5 form_create_platezh" novalidate="" autocomplete="off">
+												<table width="100%" class="org_table">
+													<tbody>
+														<tr>
+															<td style="width:50%">Поставщик </td>
+															<td>
+																<div class="col-12">
+																	<select class="form-select" id="" required>
+																		<option>ООО Пример</option>
+																	</select>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td style="width:50%">Услуга</td>
+															<td>
+																<div class="col-12">
+																	<select class="form-select" id="" required>
+																		<option>Услуга</option>
+																	</select>
+																</div>
+															</td>
+														</tr>
+														<tr class="summ_block">
+															<td style="width:50%">Сумма</td>
+															<td><input class="form-control" type="number" value="10000" step="100" required="" id=""> </td>
+														</tr>
+														<tr>
+															<td class="org_td_header">Договор:</td>
+															<td><input id="create_dog" name="create_dog" type="checkbox"></td>
+														</tr>
+														<tr>
+															<td class="org_td_header">Реквизиты </td>
+															<td><a href="" onclick="showRevizits()">+</a></td>
+														</tr>
+														<tr>
+															<td colspan="2">
+																<script>
+																	function showRevizits() {
+																		event.preventDefault();
+																		var image = document.getElementById('rekvizits_block');
+																		image.style.display = (image.style.display == 'none') ? 'block' : 'none';
+																	}
+																</script>
+																<div class="mb-3" id="rekvizits_block" style="display:none">
+																	<table width="100%" align="left">
+																		<tbody>
+																			<tr>
+																				<td>ИНН</td>
+																				<td>
+																					<input id="id_rekvizit-inn" maxlength="12" name="rekvizit-inn" type="text" value="1513070654">
+																					<p>
+																						<button style="padding: 2px; margin-top: 5px;font-size: 10px;" type="button" class="btn btn-info">Заполнить данные по ИНН</button>
+																					</p>
+																					<span id=""></span>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>КПП</td>
+																				<td><input type="text" name="rekvizit-kpp" maxlength="12" id="id_rekvizit-kpp"> </td>
+																			</tr>
+																			<tr>
+																				<td>Фирма</td>
+																				<td><input type="text" name="rekvizit-name" maxlength="200" id="id_rekvizit-name"> </td>
+																			</tr>
+																			<tr>
+																				<td>ОГРН</td>
+																				<td><input type="text" name="rekvizit-ogrn" maxlength="200" id="id_rekvizit-ogrn"> </td>
+																			</tr>
+																			<tr>
+																				<td>Должность в и.п.</td>
+																				<td><input type="text" name="rekvizit-dolzhnost" maxlength="200" id="id_rekvizit-dolzhnost"> </td>
+																			</tr>
+																			<tr>
+																				<td>Должность в р.п.</td>
+																				<td><input type="text" name="rekvizit-dolzhnost_rod" maxlength="200" id="id_rekvizit-dolzhnost_rod"> </td>
+																			</tr>
+																			<tr>
+																				<td>ФИО в р.п.</td>
+																				<td><input type="text" name="rekvizit-director_rod" maxlength="200" id="id_rekvizit-director_rod"> </td>
+																			</tr>
+																			<tr>
+																				<td>ФИО для подписи (в и.п.)</td>
+																				<td><input type="text" name="rekvizit-director" maxlength="200" id="id_rekvizit-director"> </td>
+																			</tr>
+																			<tr>
+																				<td></td>
+																				<td> </td>
+																			</tr>
+																			<tr>
+																				<td>На основании чего действует</td>
+																				<td><input type="text" name="rekvizit-osnovanie" maxlength="200" id="id_rekvizit-osnovanie"> </td>
+																			</tr>
+																			<tr>
+																				<td>Юрид.адрес</td>
+																				<td><input type="text" name="rekvizit-yur_address" maxlength="200" id="id_rekvizit-yur_address"> </td>
+																			</tr>
+																			<tr>
+																				<td>Почт.адрес</td>
+																				<td><input type="text" name="rekvizit-pocht_address" maxlength="200" id="id_rekvizit-pocht_address"> </td>
+																			</tr>
+																			<tr>
+																				<td>ОКПО</td>
+																				<td><input type="text" name="rekvizit-okpo" maxlength="200" id="id_rekvizit-okpo"> </td>
+																			</tr>
+																			<tr>
+																				<td>БИК</td>
+																				<td><input type="text" name="rekvizit-bik_bank" maxlength="200" id="id_rekvizit-bik_bank">
+																					<p><button style="padding: 2px; margin-top: 5px;font-size: 10px;" type="button" class="getdataforbik_rekvizits btn btn-info">Заполнить данные по БИК</button></p>
+																					<span id="count_request_bic_api"></span>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>Название банка</td>
+																				<td><input type="text" name="rekvizit-name_bank" maxlength="200" id="id_rekvizit-name_bank"> </td>
+																			</tr>
+																			<tr>
+																				<td>К/с</td>
+																				<td><input type="text" name="rekvizit-ksc" maxlength="200" id="id_rekvizit-ksc"> </td>
+																			</tr>
+																			<tr>
+																				<td>Расч.счёт</td>
+																				<td><input type="text" name="rekvizit-rsc" maxlength="200" id="id_rekvizit-rsc"> </td>
+																			</tr>
+																			<input type="hidden" value="93" name="platezh_org_id">
+																		</tbody>
+																	</table>
+																	<div class="text-right divtop5">
+																		<input class="me-3" type="button" value="Сохранить реквизиты">
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td class="org_td_header"></td>
+															<td> </td>
+														</tr>
+													</tbody>
+												</table>
+												<button type="submit">Сохранить</button>
+											</form>
+										</div>
+										<div>
+											<br><br>
+											<div class="org_header divtop5">Диалог с сотрудниками</div>
+											<div class="clear"></div>
+											<div style="height: 300px; width: 100%; overflow:auto; border: solid 1px black; font-size: 12px;">
+											</div>
+											<p class="mt-2"><input type="button" value="Отправить сообщение"></p>
+											<div class="clear"></div>
+											<br>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="col-6">
+										<form action="" method="post" enctype="multipart/form-data">
+											<table width="100%" class="org_table">
+												<colgroup>
+													<col width="30%">
+													<col width="70%">
+												</colgroup>
+												<tbody>
+													<tr>
+														<td class="org_header" colspan="2">Подробная информация о компании</td>
+													</tr>
+													<tr>
+														<th>Компания:</th>
+														<td>ООО Пример</td>
+													</tr>
+													<tr>
+														<th>Дата создания карты:</th>
+														<td>02.02.2002</td>
+													</tr>
+													<tr>
+														<th>ОКВЭД раздел</th>
+														<td>E - Водоснабжение; водоотведение, организация сбора и утилизации отходов, деятельность по ликвидации загрязнений.<small></small></td>
+													</tr>
+													<tr>
+														<th>ОКВЭД подраздел</th>
+														<td>38 - Сбор, обработка и утилизация отходов; обработка вторичного сырья<small></small></td>
+													</tr>
+													<tr>
+														<th>ОКВЭД</th>
+														<td>38.1 - Сбор отходов<small></small></td>
+													</tr>
+
+													<tr>
+														<th>Страна:</th>
+														<td>Россия</td>
+													</tr>
+													<tr>
+														<th>Регион:</th>
+														<td>Краснодарский Край</td>
+													</tr>
+													<tr>
+														<th>Город:</th>
+														<td>Лабинск
+
+														</td>
+													</tr>
+													<tr>
+														<th>Адрес:</th>
+														<td>352500, КРАЙ КРАСНОДАРСКИЙ, РАЙОН ЛАБИНСКИЙ, ГОРОД ЛАБИНСК, УЛИЦА КРАСИНА, -, -, -</td>
+													</tr>
+
+													<tr>
+														<th></th>
+														<td> </td>
+													</tr>
+													<tr>
+														<td class="org_td_header">ИНН:</td>
+														<td>9014010202
+
+														</td>
+													</tr>
+													<tr>
+														<th>КПП:</th>
+														<td>231400202</td>
+													</tr>
+
+												</tbody>
+											</table>
+											<table width="100%">
+												<colgroup>
+													<col width="30%">
+													<col width="70%">
+
+												</colgroup>
+												<tbody>
+
+													<tr>
+														<td class="org_header" colspan="2">Действие</td>
+													</tr>
+													<tr>
+														<th>Менеджер:</th>
+														<td> <a href="#">Иванов Иван</a> </td>
+													</tr>
+
+													<tr>
+														<th>История передачи карточки:</th>
+														<td>
+
+														</td>
+													</tr>
+
+													<tr>
+														<td class="org_td_header" colspan="2">Состояние:
+
+														</td>
+													</tr>
+													<tr id="1293">
+														<td colspan="2">
+															<div style="height: 300px; width: 100%; overflow:auto; border: solid 1px black; font-size: 12px;">
+																<span id="">
+
+																	<b>02.02.2002 15:55 :</b> Зарегистрировано 02.02.2002 15:55<br>
+																</span>
+															</div>
+
+															<br>
+															<p class="show_comment_block"><input type="button" value="Добавить комментарий"></p>
+
+															<div class="comment_block" style="display:none">
+																<div id="comment_form1293"><input type="hidden" name="csrfmiddlewaretoken" value="0hBlVbSLRPboEGdeg2J1MMGA8kGmBMb6YaSgPGOtp3ixs0xEbRAgt10djOLOGMyj">
+																	<textarea name="new_comment" id="new_comment1293" rows="5"></textarea>
+																	<input type="button" class="save_comment" value="Сохранить">
+																</div>
+															</div>
+
+														</td>
+													</tr>
+
+													<tr>
+														<th class="" colspan="2"></th>
+													</tr>
+													<tr>
+														<td colspan="2"></td>
+													</tr>
+													<tr>
+														<th class="">Статус</th>
+														<td>
+															<div><select name="" class="">
+																	<option class="" value=""></option>
+																	<option value="">---------</option>
+
+																	<option value="1" selected="">Низкий</option>
+
+																	<option value="2">Средний</option>
+
+																	<option value="3">Высокий</option>
+
+																	<option value="4">Оплачен</option>
+
+																	<option value="5">Отказ</option>
+
+																</select>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<th>Следующий контакт:</th>
+														<td>
+															<div class="">
+																<input type="text" value="02.02.2002 15:55:14">
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<input type="submit" class="btn btn-sm btn-primary mb-2" value="сохранить">
+										</form>
+									</div>
+									<hr>
+								</div>
+							</div>
+						</div>
+					</div>
+			</main>
+		</div>
+	</div>
+	<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="dashboard.js"></script>
+</body>
+</html>
