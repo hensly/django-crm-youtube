@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'js/htmx.min.js' %}"></script>
+    
     <title>Создать компанию</title>
 </head>
 
@@ -28,13 +30,17 @@
     <div class="container-fluid">
         <div class="row">
             {% include 'components/sidebarMenu.html' %}
+            <progress id="content-loader" class="htmx-indicator" max="100"></progress>
+            <div id="main-content">
             {% block content %}
             
             {% endblock %}
+            </div>
         </div>
     </div>
     <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
     <script src="{% static 'js/dashboard.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
 
-{% block content %}
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       
 
@@ -28,7 +26,14 @@
           <tbody>
                <tr>
                 <td>02.02.2002</td>
-                <td><a href="#">ООО Пример</a><br> ИНН (1234567890)</td>
+                <td><a 
+                href="{% url 'company' %}"
+                hx-get="{% url 'company' %}"
+                hx-target="#main-content"
+                hx-push-url="true"
+                hx-indicator = "#content-loader"
+                hx-on="htmx:beforeRequest: event.detail.target.innerHTML = ''"
+                >ООО Пример</a><br> ИНН (1234567890)</td>
                 <td>Россия, Республика</td>
                 <td>ГОРОД</td>
                 <td>
@@ -69,4 +74,3 @@
         </table>
       </div>
     </main>
-{% endblock %}
