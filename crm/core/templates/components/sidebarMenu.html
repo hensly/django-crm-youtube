@@ -5,26 +5,30 @@
         </h6>
         <ul class="nav flex-column mb-2">
             <li class="nav-item ">
-                <a class="nav-link" 
-                href="{% url 'main' %}"
-                hx-get="{% url 'main' %}"
+                {% url 'core:main' as core_main_page %}
+                <a class="nav-link {% if request.path == core_main_page %}active{% endif %}" 
+                href="{{core_main_page}}"
+                hx-get="{{core_main_page}}"
                 hx-target="#main-content"
                 hx-push-url="true"
                 hx-indicator = "#content-loader"
                 hx-on="htmx:beforeRequest: event.detail.target.innerHTML = ''"
+                hx-custom='title'
                 >
                     <span data-feather="file-text"></span>
                     Все компании
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" 
-                href="{% url 'create_company' %}"
-                hx-get="{% url 'create_company' %}"
+                {% url 'core:create_company' as create_company_page %}
+                <a class="nav-link {% if request.path == create_company_page %}active{% endif %}" 
+                href="{{create_company_page}}"
+                hx-get="{{create_company_page}}"
                 hx-target="#main-content"
                 hx-push-url="true"
                 hx-indicator = "#content-loader"
                 hx-on="htmx:beforeRequest: event.detail.target.innerHTML = ''"
+                hx-custom='title'
                 >
                     <span data-feather="file-text"></span>
                     Создать
@@ -37,26 +41,30 @@
         </h6>
         <ul class="nav flex-column mb-2">
             <li class="nav-item">
-                <a class="nav-link" 
-                href="{% url 'users' %}"
-                hx-get="{% url 'users' %}"
+                {% url 'core:users' as users_page %}
+                <a class="nav-link {% if request.path == users_page %}active{% endif %}" 
+                href="{{users_page}}"
+                hx-get="{{users_page}}"
                 hx-target="#main-content"
                 hx-push-url="true"
                 hx-indicator = "#content-loader"
                 hx-on="htmx:beforeRequest: event.detail.target.innerHTML = ''"
+                hx-custom='title'
                 >
                     <span data-feather="users"></span>
                     Все менеджеры
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" 
-                href="{% url 'create_user' %}"
-                hx-get="{% url 'create_user' %}"
+                {% url 'core:create_user' as create_user_page %}
+                <a class="nav-link {% if request.path == create_user_page %}active{% endif %}" 
+                href="{{create_user_page}}"
+                hx-get="{{create_user_page}}"
                 hx-target="#main-content"
                 hx-push-url="true"
                 hx-indicator = "#content-loader"
                 hx-on="htmx:beforeRequest: event.detail.target.innerHTML = ''"
+                hx-custom='title'
                 >
                     <span data-feather="users"></span>
                     Добавить

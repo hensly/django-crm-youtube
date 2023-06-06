@@ -24,20 +24,35 @@ class Home(TemplateView):
 
 class Company(CustomHtmxMixin, TemplateView):
     template_name = 'company.html'
+    def get_context_data(self, **kwargs):
+        kwargs['title'] = 'Компания 1'
+        return super().get_context_data(**kwargs)
 
 class CreateCompany(CustomHtmxMixin, TemplateView):
     template_name = 'create_company.html'
+    def get_context_data(self, **kwargs):
+        kwargs['title'] = 'Создать компанию'
+        return super().get_context_data(**kwargs)
 
 class CreateUser(CustomHtmxMixin, TemplateView):
     template_name = 'create_user.html'
+    def get_context_data(self, **kwargs):
+        kwargs['title'] = 'Создать пользователя'
+        return super().get_context_data(**kwargs)
 
 class Login(TemplateView):
     template_name = 'login.html'
 
 class Main(CustomHtmxMixin, TemplateView):
     template_name = 'main.html'
+    def get_context_data(self, **kwargs):
+        kwargs['title'] = 'Все компании'
+        return super().get_context_data(**kwargs)
 
 class Users(CustomHtmxMixin, TemplateView):
     template_name = 'users.html'
+    def get_context_data(self, **kwargs):
+        kwargs['title'] = 'Все пользователи'
+        return super().get_context_data(**kwargs)
 
 

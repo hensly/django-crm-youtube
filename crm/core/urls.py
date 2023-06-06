@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import Home, Company, CreateCompany, CreateUser, Login, Main, Users
-
+app_name = 'core'
 urlpatterns = [
     path('', Main.as_view(), name='main'),
     path('company', Company.as_view(), name='company'),
